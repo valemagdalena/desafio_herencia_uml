@@ -45,11 +45,7 @@ class OneTimeAppointment < Appointment
     end
 
     def occurs_on?(day, month, year)
-        if day.class == Integer && month.class == Integer && year.class == Integer
-            return true 
-            else 
-            return false
-        end
+        @day == day && @month == month && @year == year
     end
 
     def to_s
